@@ -1,0 +1,11 @@
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1em;
+  background-color: #6e6f82;
+}
+body header {
+  background-color: white;
+}
+body header .navbar {
+  justify-content: space-between;
+}
