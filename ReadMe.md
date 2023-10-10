@@ -5,6 +5,6 @@
    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-   <h1>Un super titreghghghtertdgsdgdsfg</h1>
+   <h1>Ohmyfood</h1>
 </body>
 </html>
