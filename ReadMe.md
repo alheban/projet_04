@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title></title>
+   <title>Ohmyfood</title>
    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-   <h1>Ohmyfood</h1>
+   <h1></h1>
 </body>
 </html>
