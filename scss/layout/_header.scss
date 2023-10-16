@@ -1,0 +1,27 @@
+header {
+  background-color: $background-white;
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: $text-localisation;
+    
+    &__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 63px;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+      position: relative;
+
+    }
+    &__localisation {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      background-color:$background-grey;
+      height: 50px;
+    }
+  }
+
+}

@@ -4,35 +4,70 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./assets/css/style.css">
+   <link rel="stylesheet" href="./assets/css/main.css">
    <title>Ohmyfood</title>
+
 </head>
 
 <body>
    <header>
       <nav class="navbar">
-         <h1 class="navbar__logo">logo</h1>
-         <div class="navbar__localisation">localisation</div>
-      </div>
+         <div class="navbar__logo">
+            <h1>Ohmyfood</h1>
+         </div>
+         <div class="navbar__localisation"><i class="fa-solid fa-location-dot fa-sm"></i>
+            <h4>Paris, Belleville</h4>
+         </div>
+      </nav>
    </header>
    <main>
-      <section>
-         <h1>Réservez le menu qui vous convient</h1>
-         <h2>Découvrez des restaurants d’exception, sélectionnés par nos soins.</h2>
-         <button>Explorer nos restaurants</button>
+      <section class="descriptif_homepage">
+         <h2>Réservez le menu qui vous convient</h2>
+         <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+         <div><button class="btn-gradient" type="button">Explorer nos restaurants</button></div>
       </section>
-      <section>
-         <h1>Fonctionnement</h1>
+      <section class="fonctionnement">
+         <h2>Fonctionnement</h2>
+         <ol>
+            <li>
+               <div><i class="fa-solid fa-mobile-screen-button fa-lg"></i> Choisissez un restaurant</div>
+            </li>
+            <li>
+               <div><i class="fa-solid fa-list fa-lg"></i> Composez votre menu</div>
+            </li>
+            <li>
+               <div><i class="fa-solid fa-store fa-lg"></i> Dégustez au restaurant</div>
+            </li>
+         </ol>
       </section>
-      <section>
-         <h1>Restaurants</h1>
-         <article></article>
-         <article></article>
-         <article></article>
-         <article></article>
+      <section class="main-restaurants">
+         <h2>Restaurants</h2>
+         <article class="main-restaurants__card">
+            <img src="assets/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+            <div class="main-restaurants__card__content">
+               <div class="content__text"><h3>Restaurants1</h3><p>Ménilmontant</p></div>
+               <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
+                  <path d="M12.7203 2.40576L12.7206 2.40551C14.7223 0.15233 17.9032 -0.169451 20.024 1.80187C22.5183 4.1243 22.6557 8.32326 20.412 10.8492L20.4119 10.8493L12.0976 20.2148C11.7594 20.5956 11.2369 20.5956 10.8987 20.2148L2.58455 10.8495C0.344816 8.32357 0.482212 4.1245 2.9764 1.80201C5.09737 -0.169649 8.28247 0.152585 10.2797 2.40514L10.2802 2.40576L11.1267 3.35732L11.5003 3.77727L11.8739 3.35732L12.7203 2.40576Z" stroke="#101010"/>
+                  </svg>
+            </div>
+         </article>
       </section>
    </main>
-   <footer></footer>
+   <footer>
+      <section class="main-footer">
+         <div class="main-footer__logo">
+            <h5>Ohmyfood</h5>
+         </div>
+         <div class="main-footer__links">
+            <div class="picto-footer"><i class="fa-solid fa-utensils fa-sm"></i><a href="#">Proposer un restaurant</a>
+            </div>
+            <div class="picto-footer"><i class="fa-solid fa-handshake-angle fa-xs"></i><a href="#">Devenir
+                  partenaire</a></div>
+            <a href="#">Mentions légales</a>
+            <a href="#">Contact</a>
+         </div>
+      </section>
+   </footer>
 </body>
 
 </html>

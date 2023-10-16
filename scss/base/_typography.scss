@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+
+//header
+@mixin Font-logo{
+    font-family: "Shrikhand", serif; 
+    font-weight: 400;
+}
+h1 {
+  font-size: 30px;
+  @include Font-logo;
+}
+
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: $text-localisation;
+}
+
+//body
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+
+  }
+
+  p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .main-restaurants__card__content p{
+    font-size: 17px;
+  }
+
+  .btn-gradient,.fonctionnement{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+//footer
+.main-footer__links a{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-white;
+}
+
+h5 {
+    font-size: 18px;
+    @include Font-logo;
+    
+  }
