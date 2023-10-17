@@ -1,18 +1,26 @@
 header {
   background-color: $background-white;
   .navbar {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    @include flexbox-colunmwrap;
     color: $text-localisation;
-    
+  
     &__logo {
       display: flex;
+      flex-flow: row nowrap;
       justify-content: center;
       align-items: center;
       height: 63px;
       box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
       position: relative;
+      
+      &__btn-retour {
+        display: flex;
+        position: absolute;
+        top: 15px; left: 15px;
+        &:hover{
+          background-color: aqua;
+        }
+      }
 
     }
     &__localisation {
@@ -22,6 +30,6 @@ header {
       background-color:$background-grey;
       height: 50px;
     }
+    
   }
-
 }

@@ -1,9 +1,23 @@
+//variable breakpoint
+$breakpoint_768:768px;
+
+
+/// mixin flexbox
+@mixin flexbox-colunmwrap{
+  display: flex;
+  flex-flow: column wrap;
+}
+/// 
+/// 
+body {
+  margin: auto;
+}
 a {
     color: inherit;
     text-decoration: none;
   }
 
-  h1,h2,h3,h4,h5{
+  h1,h2,h3,h4,h5,p{
     margin:0 ;
     padding:0;
   }
@@ -11,6 +25,8 @@ a {
 ol{
     padding: 0;
 }
+
+
 
 
 

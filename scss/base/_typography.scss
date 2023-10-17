@@ -1,58 +1,74 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
 
-//header
-@mixin Font-logo{
-    font-family: "Shrikhand", serif; 
-    font-weight: 400;
+
+@mixin Font-logo {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
 }
+@mixin Font-global300 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+@mixin Font-global500 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+@mixin Font-global700 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+//header
+
 h1 {
   font-size: 30px;
   @include Font-logo;
 }
 
-
 h4 {
-  font-family: "Roboto", sans-serif;
+  @include Font-global500;
   font-size: 16px;
-  font-weight: 500;
   color: $text-localisation;
 }
 
 //body
 
 h2 {
-    font-family: "Roboto", sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+  @include Font-global700;
+  font-size: 24px;
+}
+h3 {
+  @include Font-global700;
+  font-size: 18px;
+}
 
-  }
+p {
+  @include Font-global300;
+  font-size: 18px;
+}
 
-  p{
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-  }
+.main-restaurants__card__content p {
+  font-size: 17px;
+}
 
-  .main-restaurants__card__content p{
-    font-size: 17px;
-  }
-
-  .btn-gradient,.fonctionnement{
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-  }
+.btn-gradient,
+.fonctionnement {
+  @include Font-global500;
+  font-size: 16px;
+}
 //footer
-.main-footer__links a{
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: $text-white;
+.main-footer__links a {
+  @include Font-global500;
+  font-size: 16px;
+  color: $text-white;
 }
 
 h5 {
-    font-size: 18px;
-    @include Font-logo;
-    
-  }
+  font-size: 18px;
+  @include Font-logo;
+}
+span {
+  @include Font-global500;
+  font-size: 14px;
+
+}

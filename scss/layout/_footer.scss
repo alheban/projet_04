@@ -1,0 +1,33 @@
+footer {
+  background-color: $background-footer;
+  box-sizing: border-box;
+  color: $text-white;
+  padding: 22px 25px;
+  .main-footer {
+    @include flexbox-colunmwrap;
+    gap: 16px;
+    &__logo {
+      margin: 0;
+    }
+    &__links {
+        @include flexbox-colunmwrap;
+      gap: 7px;
+      .fa-solid {
+        margin-right: 11px;
+      }
+    }
+    @media (min-width: $breakpoint_768) {
+      flex-flow: row-reverse nowrap;
+      width: auto;
+      gap: 0;
+      &__logo {
+        margin-left: 30px;
+      }
+      &__links {
+        align-items: center;
+        flex-flow: row nowrap;
+        gap: 15px;
+      }
+    }
+  }
+}
