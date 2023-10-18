@@ -8,13 +8,16 @@
    <title>Restaurant à la Française</title>
 
 </head>
+
 <body>
    <header>
       <nav class="navbar">
          <div class="navbar__logo">
             <div class="navbar__logo__btn-retour">
                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
-               <path d="M16.3856 21.9283L15.5335 22.7417C15.1727 23.0861 14.5892 23.0861 14.2323 22.7417L6.7706 15.6229C6.4098 15.2785 6.4098 14.7215 6.7706 14.3808L14.2323 7.2583C14.5931 6.9139 15.1765 6.9139 15.5335 7.2583L16.3856 8.07167C16.7502 8.41974 16.7425 8.98763 16.3702 9.32837L11.7451 13.5345H22.7764C23.2869 13.5345 23.6976 13.9265 23.6976 14.4138V15.5862C23.6976 16.0735 23.2869 16.4655 22.7764 16.4655H11.7451L16.3702 20.6716C16.7464 21.0124 16.754 21.5803 16.3856 21.9283Z" fill="#353535"/>
+                  <path
+                     d="M16.3856 21.9283L15.5335 22.7417C15.1727 23.0861 14.5892 23.0861 14.2323 22.7417L6.7706 15.6229C6.4098 15.2785 6.4098 14.7215 6.7706 14.3808L14.2323 7.2583C14.5931 6.9139 15.1765 6.9139 15.5335 7.2583L16.3856 8.07167C16.7502 8.41974 16.7425 8.98763 16.3702 9.32837L11.7451 13.5345H22.7764C23.2869 13.5345 23.6976 13.9265 23.6976 14.4138V15.5862C23.6976 16.0735 23.2869 16.4655 22.7764 16.4655H11.7451L16.3702 20.6716C16.7464 21.0124 16.754 21.5803 16.3856 21.9283Z"
+                     fill="#353535" />
                </svg>
             </div>
             <h1>Ohmyfood</h1>
@@ -22,21 +25,140 @@
       </nav>
    </header>
    <main>
-   <div class="bandeau-restaurant">
-      <img src="../assets/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant à la francaise">
-   </div>
-   <section class="pagemenu">
-      <div class="titre_menu">
-         <h1>À la française</h1>
-         <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
-            <path
-               d="M12.7203 2.40576L12.7206 2.40551C14.7223 0.15233 17.9032 -0.169451 20.024 1.80187C22.5183 4.1243 22.6557 8.32326 20.412 10.8492L20.4119 10.8493L12.0976 20.2148C11.7594 20.5956 11.2369 20.5956 10.8987 20.2148L2.58455 10.8495C0.344816 8.32357 0.482212 4.1245 2.9764 1.80201C5.09737 -0.169649 8.28247 0.152585 10.2797 2.40514L10.2802 2.40576L11.1267 3.35732L11.5003 3.77727L11.8739 3.35732L12.7203 2.40576Z"
-               stroke="#101010" />
-         </svg>
+      <div class="bandeau-restaurant">
+         <img src="../assets/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant à la francaise">
       </div>
-      <article>
-      </article>
-   </section>
+      <section class="menu">
+         <div class="menu__titre">
+            <h1>À la française</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
+               <path
+                  d="M12.7203 2.40576L12.7206 2.40551C14.7223 0.15233 17.9032 -0.169451 20.024 1.80187C22.5183 4.1243 22.6557 8.32326 20.412 10.8492L20.4119 10.8493L12.0976 20.2148C11.7594 20.5956 11.2369 20.5956 10.8987 20.2148L2.58455 10.8495C0.344816 8.32357 0.482212 4.1245 2.9764 1.80201C5.09737 -0.169649 8.28247 0.152585 10.2797 2.40514L10.2802 2.40576L11.1267 3.35732L11.5003 3.77727L11.8739 3.35732L12.7203 2.40576Z"
+                  stroke="#101010" />
+            </svg>
+         </div>
+         <article class="menu__cardsliste">
+            <div class="menu__cardsliste__titre">
+               <p>ENTRÉES</p>
+               <div class="trait"></div>
+            </div>
+            <a href="#">
+               <div class="menu__cardsliste__card">
+                  <div class="card_titre">
+                     <h3>Tartare de poulpe acidulé</h3>
+                     <p>Aux zestes d'orange</p>
+                  </div>
+                  <div class="card_prix">
+                  <h3>25€</h3>
+                  </div>
+               </div>
+            </a>
+            <a href="#">
+               <div class="menu__cardsliste__card">
+                  <div class="card_titre">
+                     <h3>Velouté de légumes d'antan</h3>
+                     <p>Carotte, panais, topinambour</p>
+                  </div>
+                  <div class="card_prix">
+                  <h3>35€</h3>
+                  </div>
+               </div>
+            </a>
+            <a href="#">
+               <div class="menu__cardsliste__card">
+                  <div class="card_titre">
+                     <h3>Soupe à l'oignon</h3>
+                     <p>Revisitée</p>
+                  </div>
+                  <div class="card_prix">
+                  <h3>20€</h3>
+                  </div>
+               </div>
+            </a>
+            
+         </article>
+         <article class="menu__cardsliste">
+            <div class="menu__cardsliste__titre">
+               <p>PLATS</p>
+               <div class="trait"></div>
+            </div>
+            <a href="#">
+               <div class="menu__cardsliste__card">
+                  <div class="card_titre">
+                     <h3>Tartare de poulpe acidulé</h3>
+                     <p>Aux zestes d'orange</p>
+                  </div>
+                  <div class="card_prix">
+                  <h3>25€</h3>
+                  </div>
+               </div>
+            </a>
+            <a href="#">
+               <div class="menu__cardsliste__card">
+                  <div class="card_titre">
+                     <h3>Velouté de légumes d'antan</h3>
+                     <p>Carotte, panais, topinambour</p>
+                  </div>
+                  <div class="card_prix">
+                  <h3>35€</h3>
+                  </div>
+               </div>
+            </a>
+            <a href="#">
+               <div class="menu__cardsliste__card">
+                  <div class="card_titre">
+                     <h3>Soupe à l'oignon</h3>
+                     <p>Revisitée</p>
+                  </div>
+                  <div class="card_prix">
+                  <h3>20€</h3>
+                  </div>
+               </div>
+            </a>
+            
+         </article>
+         <article class="menu__cardsliste">
+            <div class="menu__cardsliste__titre">
+               <p>DÉSSERTS</p>
+               <div class="trait"></div>
+            </div>
+            <a href="#">
+               <div class="menu__cardsliste__card">
+                  <div class="card_titre">
+                     <h3>Tartare de poulpe acidulé</h3>
+                     <p>Aux zestes d'orange</p>
+                  </div>
+                  <div class="card_prix">
+                  <h3>25€</h3>
+                  </div>
+               </div>
+            </a>
+            <a href="#">
+               <div class="menu__cardsliste__card">
+                  <div class="card_titre">
+                     <h3>Velouté de légumes d'antan</h3>
+                     <p>Carotte, panais, topinambour</p>
+                  </div>
+                  <div class="card_prix">
+                  <h3>35€</h3>
+                  </div>
+               </div>
+            </a>
+            <a href="#">
+               <div class="menu__cardsliste__card">
+                  <div class="card_titre">
+                     <h3>Soupe à l'oignon</h3>
+                     <p>Revisitée</p>
+                  </div>
+                  <div class="card_prix">
+                  <h3>20€</h3>
+                  </div>
+               </div>
+            </a>
+            
+         </article>
+         <div class="menu__btn-commande"><button class="btn-gradient" type="button">Commander</button></div>
+      </section>
    </main>
    <footer>
       <section class="main-footer">
@@ -54,4 +176,5 @@
       </section>
    </footer>
 </body>
+
 </html>
