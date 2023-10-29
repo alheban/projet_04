@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
-body {
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+body, html {
   margin: auto;
   height: 100%;
+  box-sizing: border-box;
 }
 
 a {
@@ -92,12 +94,85 @@ span {
   font-size: 14px;
 }
 
+.containerload {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: logoload 3000ms 350ms both;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+
+.load {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  animation: logoload 3000ms 350ms both;
+}
+.load__bar {
+  opacity: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: wrap;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  animation: bars 3000ms 350ms both;
+}
+.load__bar--1 {
+  animation-delay: 350ms;
+}
+.load__bar--2 {
+  animation-delay: 700ms;
+}
+.load__bar--3 {
+  animation-delay: 1050ms;
+}
+
+.load__bar--1 {
+  background-color: #9356dc;
+}
+
+.load__bar--2 {
+  background-color: #ff79da;
+}
+
+.load__bar--3 {
+  background-color: #99e2d0;
+}
+
+@keyframes bars {
+  10% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+  95% {
+    transform: rotate(180deg) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes logoload {
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .fa-solid {
   margin-right: 17px;
 }
 
 .btn-gradient {
-  background-image: linear-gradient(to bottom, #9356DC -11.44%, #FF79DA 123.93%);
   padding: 13px 18.75px;
   text-align: center;
   color: white;
@@ -105,10 +180,58 @@ span {
   border: none;
   width: auto;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(to bottom, #9356DC -11.44%, #FF79DA 123.93%);
+  border: none;
+  position: relative;
+  z-index: 1;
 }
-.btn-gradient:hover {
-  background-image: linear-gradient(to bottom, #FF79DA -11.44%, #9356DC 123.93%);
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.45);
+.btn-gradient:hover::after {
+  opacity: 1;
+}
+.btn-gradient::after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #a16be0 0%, #ff93e1 100%);
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.btn-coeur {
+  position: relative;
+  z-index: 1;
+  border: none;
+  opacity: 1;
+  background: none;
+}
+.btn-coeur:focus .btn-coeur__bg {
+  opacity: 1;
+  z-index: 1;
+}
+.btn-coeur:hover .btn-coeur__bg {
+  opacity: 1;
+  z-index: 1;
+}
+.btn-coeur:active::after .btn-coeur__bg {
+  opacity: 1;
+  z-index: 1;
+}
+
+.btn-coeur__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 500ms;
 }
 
 header {
@@ -290,15 +413,12 @@ footer .main-footer__links .fa-solid {
     justify-content: space-between;
     gap: 50px;
   }
-}
-@media (min-width: 768px) {
-  .restaurants .main-restaurants__liste {
-    flex-flow: row wrap;
-    justify-content: space-between;
-    gap: 50px;
+  .restaurants .main-restaurants__liste a {
+    width: 45%;
   }
 }
 .restaurants .main-restaurants__liste__card {
+  width: 100%;
   background: #FFFFFF;
   border-radius: 15px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -309,13 +429,11 @@ footer .main-footer__links .fa-solid {
 }
 @media (min-width: 768px) {
   .restaurants .main-restaurants__liste__card {
-    width: 45%;
+    width: 100%;
   }
 }
 .restaurants .main-restaurants__liste__card__content {
   display: flex;
-  flex-flow: row nowrap;
-  height: auto;
   justify-content: space-between;
   padding: 13px 25px 13px 13px;
   align-items: center;

@@ -1,8 +1,10 @@
 @import "base/_global.scss";
 @import "base/_color.scss";
 @import "base/_typography.scss";
+@import "components/_loader.scss";
 @import "base/_pictogramme.scss";
 @import "components/_buttons.scss";
+
 @import "layout/_header.scss";
 @import "layout/_footer.scss";
 
@@ -86,27 +88,27 @@
   .main-restaurants {
     @include flexbox-colunmwrap;
     gap: 15px;
-
     @media (min-width: $breakpoint_768) {
       justify-content: center;
       margin-right: 10%;
       margin-left: 10%;
     }
+    
     &__liste {
       @include flexbox-colunmwrap;
       gap: 15px;
       @media (min-width: $breakpoint_768) {
-        flex-flow: row wrap;
-        justify-content: space-between;
+flex-flow: row wrap;
+justify-content: space-between;
         gap: 50px;
-      }
-      @media (min-width: $breakpoint_768) {
-        flex-flow: row wrap;
-        justify-content: space-between;
-        gap: 50px;
+        a{
+          width: 45%;
+        }
       }
 
+
       &__card {
+        width: 100%;
         background: $background-white;
         border-radius: 15px;
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -115,13 +117,11 @@
           box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
         }
         @media (min-width: $breakpoint_768) {
-          width: 45%;
+          width: 100%;
         }
 
         &__content {
           display: flex;
-          flex-flow: row nowrap;
-          height: auto;
           justify-content: space-between;
           padding: 13px 25px 13px 13px;
           align-items: center;
@@ -179,7 +179,7 @@
   position: relative;
   left: 5%;
   z-index: 2;
-  gap:40px;
+  gap: 40px;
   padding-bottom: 40px;
 
   &__titre {
@@ -188,28 +188,27 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
-    margin-top:32px ;
-
+    margin-top: 32px;
   }
   &__cardsliste {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     flex-flow: column wrap;
     margin: 10px;
-    gap:12px;
-    &__titre{
+    gap: 12px;
+    &__titre {
       display: flex;
       flex-flow: column wrap;
-      .trait{
+      .trait {
         background-color: $tertiaire-green;
         width: 40px;
         height: 3px;
       }
     }
-    &__card{
+    &__card {
       display: flex;
       flex-flow: row nowrap;
-      justify-content:space-between;
+      justify-content: space-between;
       align-items: center;
       background-color: $background-white;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
@@ -217,13 +216,12 @@
       height: 42px;
       width: auto;
       padding: 15px;
-      &:hover{
+      &:hover {
         box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
-}
+      }
     }
-
   }
-  &__btn-commande{
+  &__btn-commande {
     display: flex;
     justify-content: center;
   }

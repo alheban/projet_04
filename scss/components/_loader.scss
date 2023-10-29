@@ -1,0 +1,76 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+
+$size: 40px;
+$anim-dur: 3000ms;
+$anim-delay: 350ms;
+
+.containerload {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.90);
+  animation: logoload $anim-dur $anim-delay both;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+
+
+.load {
+  position: absolute;
+  width: $size * 5;
+  height: $size * 1;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+ animation: logoload $anim-dur $anim-delay both;
+  &__bar {
+    opacity: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: wrap;
+    border-radius: 50%;
+    height: $size;
+    width: $size;
+    animation: bars $anim-dur $anim-delay both;
+    @for $i from 1 through 3 {
+      &--#{$i} {
+        animation-delay: $anim-delay * $i;
+
+      }
+    }
+  }
+}
+
+.load__bar--1 {
+  background-color: #9356dc;
+}
+.load__bar--2 {
+  background-color: #ff79da;
+}
+.load__bar--3 {
+  background-color: #99e2d0;
+}
+
+@keyframes bars {
+  10% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+  95% {
+    transform: rotate(180deg) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes logoload {
+    30% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

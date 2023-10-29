@@ -9,13 +9,15 @@ $breakpoint_768:768px;
 }
 /// 
 /// 
-body{
+body, html{
   margin: auto;
   height: 100%;
+  box-sizing: border-box;
 }
 a {
     color: inherit;
     text-decoration: none;
+    
   }
 
   h1,h2,h3,h4,h5,p{
