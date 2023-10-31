@@ -41,6 +41,10 @@ h3 {
   @include Font-global700;
   font-size: 18px;
 }
+h6 {
+  @include Font-global700;
+  font-size: 16px;
+}
 
 p {
   @include Font-global300;
@@ -72,3 +76,4 @@ span {
   font-size: 14px;
 
 }
+///loader

@@ -1,12 +1,12 @@
 footer {
-  margin-top: auto;
-  background-color: $background-footer;
-  box-sizing: border-box;
-  color: $text-white;
-  padding: 22px 25px;
   .main-footer {
+    background-color: $background-footer;
+    color: $text-white;
+    padding: 22px 25px;
+    height: 142px;
     @include flexbox-colunmwrap;
     gap: 16px;
+    
     &__logo {
       margin: 0;
     }
@@ -18,11 +18,17 @@ footer {
       }
     }
     @media (min-width: $breakpoint_768) {
+    padding:0 ;
+    height: 114px;
       flex-flow: row-reverse nowrap;
+      //padding: 64px 0 25px 0;
       width: auto;
       gap: 0;
+      align-items: center;
+      
       &__logo {
         margin-left: 30px;
+        margin-right: 60px;
       }
       &__links {
         align-items: center;

@@ -5,46 +5,54 @@ $anim-dur: 3000ms;
 $anim-delay: 350ms;
 
 .containerload {
-  position: absolute;
+  position: fixed;
+  top:0;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  align-content: center;
   background-color: rgba(255, 255, 255, 0.90);
   animation: logoload $anim-dur $anim-delay both;
   z-index: 2;
   height: 100%;
   width: 100%;
-}
 
-
-.load {
-  position: absolute;
-  width: $size * 5;
-  height: $size * 1;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
- animation: logoload $anim-dur $anim-delay both;
-  &__bar {
-    opacity: 0;
+  .load {
+    
+    height: 100%;
+    width: 100%;
+    gap:15px;
+    width: $size * 5;
+    height: $size * 1;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    flex-flow: wrap;
-    border-radius: 50%;
-    height: $size;
-    width: $size;
-    animation: bars $anim-dur $anim-delay both;
-    @for $i from 1 through 3 {
-      &--#{$i} {
-        animation-delay: $anim-delay * $i;
-
+    flex-flow: row wrap;
+   animation: logoload $anim-dur $anim-delay both;
+h5{
+  transform: scale(1.5);
+}
+    &__bar {
+      opacity: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-flow: wrap;
+      border-radius: 50%;
+      height: $size;
+      width: $size;
+      animation: bars $anim-dur $anim-delay both;
+      @for $i from 1 through 3 {
+        &--#{$i} {
+          animation-delay: $anim-delay * $i;
+  
+        }
       }
     }
   }
 }
+
+
+
 
 .load__bar--1 {
   background-color: #9356dc;
@@ -71,6 +79,8 @@ $anim-delay: 350ms;
       opacity: 1;
     }
     100% {
+
       opacity: 0;
+      display:none;
     }
   }

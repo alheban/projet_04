@@ -18,7 +18,8 @@ header {
         position: absolute;
         top: 15px; left: 15px;
         &:hover{
-          background-color: aqua;
+         background-color: $background-greylight;
+         border-radius: 5px;
         }
       }
 
