@@ -246,6 +246,9 @@ $anim-delay-menu: 500ms;
         @media (max-width: 320px) {
           width: 187px;
         }
+        @media (min-width: 375px) {
+          width: 242px;
+        }
       }
 
       .card_content {

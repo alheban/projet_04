@@ -136,7 +136,7 @@ span {
   background-color: rgba(255, 255, 255, 0.9);
   animation: bgload 0s 1.5s both;
   -webkit-animation: bgload 0s 2s both;
-  z-index: 2;
+  z-index: 4;
   height: 100%;
   width: 100%;
 }
@@ -263,9 +263,8 @@ span {
 }
 .btn-coeur:hover .btn-coeur__bg {
   opacity: 1;
-  z-index: 1;
+  z-index: 3;
 }
-
 .btn-coeur__bg {
   position: absolute;
   top: 0;
@@ -273,7 +272,7 @@ span {
   bottom: 0;
   left: 0;
   opacity: 0;
-  z-index: -1;
+  z-index: 3;
   transition: opacity 500ms;
 }
 
@@ -610,6 +609,12 @@ footer .main-footer__links .fa-solid {
   .menu__cardsliste__card .card_titre > p,
   .menu__cardsliste__card h3 {
     width: 187px;
+  }
+}
+@media (min-width: 375px) {
+  .menu__cardsliste__card .card_titre > p,
+  .menu__cardsliste__card h3 {
+    width: 242px;
   }
 }
 .menu__cardsliste__card .card_content {
