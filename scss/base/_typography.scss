@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 @mixin Font-logo {
   font-family: "Shrikhand", serif;
@@ -17,6 +16,10 @@
 @mixin Font-global700 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+}
+@mixin Font-global400 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 //header
 
@@ -41,6 +44,7 @@ h3 {
   @include Font-global700;
   font-size: 18px;
 }
+
 h6 {
   @include Font-global700;
   font-size: 16px;
@@ -50,7 +54,19 @@ p {
   @include Font-global300;
   font-size: 18px;
 }
-
+//pages restaurants
+.content__text >p {
+  @include Font-global300;
+  font-size: 17px;
+}
+.card_titre >p {
+  @include Font-global300;
+  font-size: 15px;
+}
+.card_titre >h3 {
+  @include Font-global500;
+  font-size: 18px;
+}
 .main-restaurants__card__content p {
   font-size: 17px;
 }
@@ -61,8 +77,13 @@ p {
   font-size: 16px;
 }
 //footer
-.main-footer__links a {
+.picto-footer  a {
   @include Font-global500;
+  font-size: 16px;
+  color: $text-white;
+}
+.main-footer__links > a {
+  @include Font-global400;
   font-size: 16px;
   color: $text-white;
 }

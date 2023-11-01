@@ -5,6 +5,8 @@ footer {
     padding: 22px 25px;
     height: 142px;
     @include flexbox-colunmwrap;
+    -webkit-flex-direction: column;
+    -webkit-flex-wrap: wrap;
     gap: 16px;
     
     &__logo {

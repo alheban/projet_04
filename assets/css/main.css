@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 body, html {
@@ -71,6 +71,24 @@ p {
   font-size: 18px;
 }
 
+.content__text > p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.card_titre > p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.card_titre > h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
 .main-restaurants__card__content p {
   font-size: 17px;
 }
@@ -82,9 +100,16 @@ p {
   font-size: 16px;
 }
 
-.main-footer__links a {
+.picto-footer a {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.main-footer__links > a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   color: #FFFFFF;
 }
@@ -109,7 +134,8 @@ span {
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.9);
-  animation: logoload 3000ms 350ms both;
+  animation: bgload 0s 1.5s both;
+  -webkit-animation: bgload 0s 2s both;
   z-index: 2;
   height: 100%;
   width: 100%;
@@ -123,7 +149,8 @@ span {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
-  animation: logoload 3000ms 350ms both;
+  animation: logoload 2000ms 350ms both;
+  -webkit-animation: logoload 2000ms 350ms both;
 }
 .containerload .load h5 {
   transform: scale(1.5);
@@ -137,7 +164,9 @@ span {
   border-radius: 50%;
   height: 40px;
   width: 40px;
-  animation: bars 3000ms 350ms both;
+  animation: bars 2000ms 350ms both;
+  -webkit-animation: bars 2000ms 350ms both;
+  -moz-animation: bars 2000ms 350ms both;
 }
 .containerload .load__bar--1 {
   animation-delay: 350ms;
@@ -177,6 +206,16 @@ span {
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes bgload {
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
     display: none;
   }
 }
@@ -222,15 +261,7 @@ span {
   opacity: 1;
   background: none;
 }
-.btn-coeur:focus .btn-coeur__bg {
-  opacity: 1;
-  z-index: 1;
-}
 .btn-coeur:hover .btn-coeur__bg {
-  opacity: 1;
-  z-index: 1;
-}
-.btn-coeur:active::after .btn-coeur__bg {
   opacity: 1;
   z-index: 1;
 }
@@ -288,6 +319,8 @@ footer .main-footer {
   height: 142px;
   display: flex;
   flex-flow: column wrap;
+  -webkit-flex-direction: column;
+  -webkit-flex-wrap: wrap;
   gap: 16px;
 }
 footer .main-footer__logo {
@@ -362,7 +395,6 @@ footer .main-footer__links .fa-solid {
   counter-increment: ol;
   display: flex;
   list-style: none;
-  align-content: right;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
@@ -477,7 +509,7 @@ footer .main-footer__links .fa-solid {
   padding: 5px 15px;
   border-radius: 2px;
 }
-.restaurants .main-restaurants__liste__card .stickernew:not(.stickernew:not(.st1, .st2)) {
+.restaurants .main-restaurants__liste__card .stickernew:not(.st1, .st2) {
   display: none;
 }
 
@@ -510,6 +542,7 @@ footer .main-footer__links .fa-solid {
 }
 .menu__titre {
   display: flex;
+  -webkit-flex-flow: row;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
@@ -565,28 +598,19 @@ footer .main-footer__links .fa-solid {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 200px;
-}
-@media (min-width: 320px) {
-  .menu__cardsliste__card .card_titre > p,
-  .menu__cardsliste__card h3 {
-    width: 180px;
-  }
+  width: 250px;
 }
 @media (min-width: 768px) {
   .menu__cardsliste__card .card_titre > p,
   .menu__cardsliste__card h3 {
-    width: 80%;
+    width: 100%;
   }
 }
-@media (min-width: 425px) {
+@media (max-width: 320px) {
   .menu__cardsliste__card .card_titre > p,
   .menu__cardsliste__card h3 {
-    width: 290px;
+    width: 187px;
   }
-}
-.menu__cardsliste__card .card_titre {
-  width: 80%;
 }
 .menu__cardsliste__card .card_content {
   display: flex;

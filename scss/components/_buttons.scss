@@ -40,29 +40,15 @@
 border:none;
 opacity: 1;
 background:none;
-  &:focus {
-      .btn-coeur__bg {
-        opacity: 1;
-        z-index: 1;
 
-  }
-}
 &:hover {
       .btn-coeur__bg {
         opacity: 1;
         z-index: 1;   
   }
   }
-  
-&:active::after{
-      .btn-coeur__bg {
-        opacity: 1;
-        z-index: 1;
-
-  }
-  }
-
 }
+
 .btn-coeur__bg {
       position: absolute;
       top: 0;
