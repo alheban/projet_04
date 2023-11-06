@@ -3,7 +3,7 @@ footer {
     background-color: $background-footer;
     color: $text-white;
     padding: 22px 25px;
-    height: 142px;
+    
     @include flexbox-colunmwrap;
     -webkit-flex-direction: column;
     -webkit-flex-wrap: wrap;
@@ -23,7 +23,6 @@ footer {
     padding:0 ;
     height: 114px;
       flex-flow: row-reverse nowrap;
-      //padding: 64px 0 25px 0;
       width: auto;
       gap: 0;
       align-items: center;
@@ -31,12 +30,27 @@ footer {
       &__logo {
         margin-left: 30px;
         margin-right: 60px;
+        padding: 64px 0 25px 0;
       }
       &__links {
+        padding: 64px 0 25px 0;
         align-items: center;
         flex-flow: row nowrap;
         gap: 15px;
       }
     }
+    @media (min-width: 1441px) {
+      padding:0 ;
+      height: 140px;
+      &__logo {
+
+        padding: 54px 0 25px 0;
+      }
+      &__links {
+        padding: 54px 0 25px 0;
+      }
+    }
+    }
+
   }
-}
+

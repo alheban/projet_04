@@ -55,6 +55,15 @@ p {
   font-size: 18px;
 }
 //pages restaurants
+.descriptif_homepage >h2{
+  font-size: 40px;
+  @include Font-global700;
+}
+
+.menu__titre >h1{
+  font-size: 28px;
+  @include Font-logo;
+}
 .content__text >p {
   @include Font-global300;
   font-size: 17px;

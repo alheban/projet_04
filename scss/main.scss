@@ -4,7 +4,6 @@
 @import "components/_loader.scss";
 @import "base/_pictogramme.scss";
 @import "components/_buttons.scss";
-
 @import "layout/_header.scss";
 @import "layout/_footer.scss";
 
@@ -22,16 +21,24 @@
 .fonctionnement {
   @include flexbox-colunmwrap;
   background-color: $background-white;
-  margin: 20px;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 15px;
   @media (min-width: 768px) {
     justify-content: center;
     margin: 2%;
     margin-right: 10%;
     margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
   ///puce etape customisze avec fonction counter
   ol {
+    padding: 0;
+    margin: 0;
     counter-reset: ol;
     @include flexbox-colunmwrap;
     gap: 20px;
@@ -80,83 +87,156 @@
 
 //////section restaurant
 .restaurants {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   background-color: $background-greylight;
   padding: 20px;
+  gap:15px;
   @media (min-width: $breakpoint_768) {
-    padding: 20px 0;
+    gap:25px;
+    padding: 25px 10%;
   }
   .main-restaurants {
-    @include flexbox-colunmwrap;
-    gap: 15px;
-    @media (min-width: $breakpoint_768) {
-      justify-content: center;
-      margin-top: 1%;
-      margin-right: 10%;
-      margin-left: 10%;
-    }
-
     &__liste {
-      @include flexbox-colunmwrap;
+      display: flex;
+      flex-direction: column;
       gap: 15px;
       @media (min-width: $breakpoint_768) {
-        flex-flow: row wrap;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
-        gap: 50px;
-        a {
-          width: 45%;
-        }
       }
-
       &__card {
-        width: 100%;
-        background: $background-white;
-        border-radius: 15px;
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-        transition: 0.5s;
-        &:hover {
-          box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
         @media (min-width: $breakpoint_768) {
-          width: 100%;
+         width: 45%; 
         }
-
         &__content {
-          display: flex;
-          justify-content: space-between;
-          padding: 13px 25px 13px 13px;
-          align-items: center;
-        }
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: 174px;
-          border-top-left-radius: 15px;
-          border-top-right-radius: 15px;
-        }
+          background: $background-white;
+          border-radius: 15px;
+          filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+          transition: 0.5s;
+          
+          &:hover {
+            box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
+          }
 
-        .stickernew {
-          background-color: $tertiaire-green;
-          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-          color: $color-stiker;
-          width: 10%;
-          text-align: center;
-          position: absolute;
-          right: 10px;
-          top: 10px;
-          z-index: 1;
-          overflow: hidden;
-          width: auto;
-          height: auto;
-          padding: 5px 15px;
-          border-radius: 2px;
-        }
-        .stickernew:not(.st1, .st2) {
-          display: none;
+          &__text {
+            display: flex;
+            flex-direction: column;
+            padding: 13px 25px 13px 13px;
+            align-items: flex-start;
+          }
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 174px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+          }
+          
+          .stickernew {
+            background-color: $tertiaire-green;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+            color: $color-stiker;
+            width: 10%;
+            text-align: center;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 1;
+            overflow: hidden;
+            width: auto;
+            height: auto;
+            padding: 5px 15px;
+            border-radius: 2px;
+          }
+          .stickernew:not(.st1, .st2) {
+            display: none;
+          }
+          }
         }
       }
     }
   }
-}
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"]:hover + label {
+    .coeur__vide {
+      opacity: 0;
+    }
+    .coeur__plein {
+      opacity: 1;
+    }
+  }
+  input[type="checkbox"]:checked + label {
+    .coeur__plein {
+      opacity: 1;
+    }
+    .coeur__vide {
+      opacity: 0;
+    }
+  }
+  
+  .check {
+    position: absolute;
+    top: 80%;
+    left: 85%;
+    width: 22px;
+    height: 22px;
+    z-index: 3;
+    @media (min-width: 1024px) {
+      left: 90%;
+    }
+  }
+  //check page restaurant
+  .check1{
+    position: relative;
+    left:5%;
+    @media (min-width: 768px) {
+      left: 0;
+    }
+    @media (max-width:320px) {
+      left: -4%;
+    }
+
+  }
+  label {
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .coeur__vide {
+    display: flex;
+    transition: ease-in-out 0.5s;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -3;
+    width: 23px;
+    height: 23px;
+  }
+  
+  .coeur__plein {
+    display: flex;
+    transition: ease-in-out 0.5s;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    width: 23px;
+    height: 23px;
+  }
 //////////page restaurant à la francaise///////////
 .bandeau-restaurant {
   img {
@@ -190,10 +270,15 @@ $anim-delay-menu: 500ms;
     display: flex;
     -webkit-flex-flow: row;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 24px;
     margin-top: 32px;
+    margin-left: 6%;
+    @media (min-width: $breakpoint_768) {
+      justify-content: center;
+      margin-left: 0;
+    }
   }
   &__cardsliste {
     opacity: 0;
