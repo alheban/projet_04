@@ -3,7 +3,7 @@
 .btn-gradient {
   padding: 13px 18.75px;
   text-align: center;
-  color: white;            
+  color: $text-white;            
   border-radius: 25px;
   border: none;
   width: auto;
@@ -18,8 +18,9 @@
       }
   }
 &::after{
-  opacity:0;
-  content:"";
+      opacity:0;
+      //content La propriété CSS remplace le contenu par une valeur générée.
+      content:"";
       position: absolute;
       top: 0;
       right: 0;
@@ -32,30 +33,3 @@
       box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   }
 }
-
-
-/*.btn-coeur{
-  position: relative;
-  z-index: 1;
-border:none;
-opacity: 1;
-background:none;
-
-&:hover {
-      .btn-coeur__bg {
-        opacity: 1;
-        z-index: 3;   
-  }
-  }
-  &__bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    z-index: 3;
-    transition: opacity 500ms;
-}
-}*/
-

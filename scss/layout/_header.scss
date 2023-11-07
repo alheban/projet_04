@@ -3,7 +3,7 @@ header {
   .navbar {
     @include flexbox-colunmwrap;
     color: $text-localisation;
-  
+
     &__logo {
       display: flex;
       flex-flow: row nowrap;
@@ -12,25 +12,24 @@ header {
       height: 63px;
       box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
       position: relative;
-      
+
       &__btn-retour {
         display: flex;
         position: absolute;
-        top: 15px; left: 15px;
-        &:hover{
-         background-color: $background-greylight;
-         border-radius: 5px;
+        top: 15px;
+        left: 15px;
+        &:hover {
+          background-color: $background-greylight;
+          border-radius: 5px;
         }
       }
-
     }
     &__localisation {
       justify-content: center;
       display: flex;
       align-items: center;
-      background-color:$background-grey;
+      background-color: $background-grey;
       height: 50px;
     }
-    
   }
 }

@@ -238,7 +238,7 @@ span {
 .btn-gradient {
   padding: 13px 18.75px;
   text-align: center;
-  color: white;
+  color: #FFFFFF;
   border-radius: 25px;
   border: none;
   width: auto;
@@ -266,30 +266,86 @@ span {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-/*.btn-coeur{
-  position: relative;
-  z-index: 1;
-border:none;
-opacity: 1;
-background:none;
-
-&:hover {
-      .btn-coeur__bg {
-        opacity: 1;
-        z-index: 3;   
-  }
-  }
-  &__bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    z-index: 3;
-    transition: opacity 500ms;
+input[type=checkbox] {
+  display: none;
 }
-}*/
+
+input[type=checkbox]:hover + label .coeur__vide {
+  opacity: 0;
+}
+input[type=checkbox]:hover + label .coeur__plein {
+  opacity: 1;
+}
+
+input[type=checkbox]:checked + label .coeur__plein {
+  opacity: 1;
+}
+input[type=checkbox]:checked + label .coeur__vide {
+  opacity: 0;
+}
+
+.check {
+  position: absolute;
+  top: 80%;
+  left: 85%;
+  width: 22px;
+  height: 22px;
+  z-index: 3;
+}
+@media (min-width: 1024px) {
+  .check {
+    left: 90%;
+  }
+}
+
+.check1 {
+  position: relative;
+  left: 5%;
+}
+@media (min-width: 768px) {
+  .check1 {
+    left: 0;
+  }
+}
+@media (max-width: 320px) {
+  .check1 {
+    left: -4%;
+  }
+}
+
+label {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.coeur__vide {
+  display: flex;
+  transition: ease-in-out 0.5s;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -3;
+  width: 23px;
+  height: 23px;
+}
+
+.coeur__plein {
+  display: flex;
+  transition: ease-in-out 0.5s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  width: 23px;
+  height: 23px;
+}
+
 header {
   background-color: #FFFFFF;
 }
@@ -449,7 +505,7 @@ footer .main-footer__links .fa-solid {
 }
 .fonctionnement ol li::before {
   content: counter(ol);
-  color: white;
+  color: #FFFFFF;
   width: 10px;
   height: 10px;
   margin-left: -12px;
@@ -478,7 +534,7 @@ footer .main-footer__links .fa-solid {
 }
 .restaurants .main-restaurants__liste {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 15px;
 }
 @media (min-width: 768px) {
@@ -490,7 +546,7 @@ footer .main-footer__links .fa-solid {
 }
 .restaurants .main-restaurants__liste__card {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 15px;
 }
 @media (min-width: 768px) {
@@ -509,7 +565,7 @@ footer .main-footer__links .fa-solid {
 }
 .restaurants .main-restaurants__liste__card__content__text {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   padding: 13px 25px 13px 13px;
   align-items: flex-start;
 }
@@ -538,86 +594,6 @@ footer .main-footer__links .fa-solid {
 }
 .restaurants .main-restaurants__liste__card__content .stickernew:not(.st1, .st2) {
   display: none;
-}
-
-input[type=checkbox] {
-  display: none;
-}
-
-input[type=checkbox]:hover + label .coeur__vide {
-  opacity: 0;
-}
-input[type=checkbox]:hover + label .coeur__plein {
-  opacity: 1;
-}
-
-input[type=checkbox]:checked + label .coeur__plein {
-  opacity: 1;
-}
-input[type=checkbox]:checked + label .coeur__vide {
-  opacity: 0;
-}
-
-.check {
-  position: absolute;
-  top: 80%;
-  left: 85%;
-  width: 22px;
-  height: 22px;
-  z-index: 3;
-}
-@media (min-width: 1024px) {
-  .check {
-    left: 90%;
-  }
-}
-
-.check1 {
-  position: relative;
-  left: 5%;
-}
-@media (min-width: 768px) {
-  .check1 {
-    left: 0;
-  }
-}
-@media (max-width: 320px) {
-  .check1 {
-    left: -4%;
-  }
-}
-
-label {
-  display: inline-block;
-  overflow: hidden;
-}
-
-.coeur__vide {
-  display: flex;
-  transition: ease-in-out 0.5s;
-  opacity: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -3;
-  width: 23px;
-  height: 23px;
-}
-
-.coeur__plein {
-  display: flex;
-  transition: ease-in-out 0.5s;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-  width: 23px;
-  height: 23px;
 }
 
 .bandeau-restaurant img {

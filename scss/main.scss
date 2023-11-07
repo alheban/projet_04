@@ -4,6 +4,7 @@
 @import "components/_loader.scss";
 @import "base/_pictogramme.scss";
 @import "components/_buttons.scss";
+@import "components/_input.scss";
 @import "layout/_header.scss";
 @import "layout/_footer.scss";
 
@@ -26,7 +27,7 @@
   margin-top: 50px;
   margin-bottom: 50px;
   gap: 15px;
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint_768) {
     justify-content: center;
     margin: 2%;
     margin-right: 10%;
@@ -40,14 +41,16 @@
     padding: 0;
     margin: 0;
     counter-reset: ol;
+    //La propriété CSS réinitialise un compteur CSS à une valeur donnée. Cette propriété créera un nouveau compteur 
     @include flexbox-colunmwrap;
     gap: 20px;
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint_768) {
       flex-flow: row wrap;
       justify-content: space-between;
     }
     li {
       counter-increment: ol;
+      //counter-increment La propriété CSS augmente ou diminue la valeur du compteur
       display: flex;
       list-style: none;
       background-color: $background-greylight;
@@ -61,14 +64,15 @@
       i {
         color: $color-picto-fonctionnement;
       }
-      @media (min-width: 768px) {
+      @media (min-width: $breakpoint_768) {
         gap: 5%;
         width: 30%;
       }
     }
     li::before {
       content: counter(ol);
-      color: white;
+      //La propriété CSS remplace le contenu par une valeur générée
+      color: $text-white;
       width: 10px;
       height: 10px;
       margin-left: -12px;
@@ -99,8 +103,7 @@
   }
   .main-restaurants {
     &__liste {
-      display: flex;
-      flex-direction: column;
+      @include flexbox-colunmwrap;
       gap: 15px;
       @media (min-width: $breakpoint_768) {
         flex-direction: row;
@@ -108,8 +111,7 @@
         justify-content: space-between;
       }
       &__card {
-        display: flex;
-        flex-direction: column;
+        @include flexbox-colunmwrap;
         gap: 15px;
         @media (min-width: $breakpoint_768) {
          width: 45%; 
@@ -125,8 +127,7 @@
           }
 
           &__text {
-            display: flex;
-            flex-direction: column;
+            @include flexbox-colunmwrap;
             padding: 13px 25px 13px 13px;
             align-items: flex-start;
           }
@@ -162,81 +163,7 @@
       }
     }
   }
-  input[type="checkbox"] {
-    display: none;
-  }
-  input[type="checkbox"]:hover + label {
-    .coeur__vide {
-      opacity: 0;
-    }
-    .coeur__plein {
-      opacity: 1;
-    }
-  }
-  input[type="checkbox"]:checked + label {
-    .coeur__plein {
-      opacity: 1;
-    }
-    .coeur__vide {
-      opacity: 0;
-    }
-  }
-  
-  .check {
-    position: absolute;
-    top: 80%;
-    left: 85%;
-    width: 22px;
-    height: 22px;
-    z-index: 3;
-    @media (min-width: 1024px) {
-      left: 90%;
-    }
-  }
-  //check page restaurant
-  .check1{
-    position: relative;
-    left:5%;
-    @media (min-width: 768px) {
-      left: 0;
-    }
-    @media (max-width:320px) {
-      left: -4%;
-    }
 
-  }
-  label {
-    display: inline-block;
-    overflow: hidden;
-  }
-  
-  .coeur__vide {
-    display: flex;
-    transition: ease-in-out 0.5s;
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -3;
-    width: 23px;
-    height: 23px;
-  }
-  
-  .coeur__plein {
-    display: flex;
-    transition: ease-in-out 0.5s;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
-    width: 23px;
-    height: 23px;
-  }
 //////////page restaurant à la francaise///////////
 .bandeau-restaurant {
   img {
@@ -325,13 +252,13 @@ $anim-delay-menu: 500ms;
         overflow: hidden;
         text-overflow: ellipsis;
         width: 250px;
-        @media (min-width: 768px) {
+        @media (min-width: $breakpoint_768) {
           width: 100%;
         }
-        @media (max-width: 320px) {
+        @media (max-width: $breakpoint_320) {
           width: 187px;
         }
-        @media (min-width: 375px) {
+        @media (min-width: $breakpoint_375) {
           width: 242px;
         }
       }

@@ -6,12 +6,12 @@ $anim-delay: 350ms;
 
 .containerload {
   position: fixed;
-  top:0;
+  top: 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.90);
+  background-color: rgba(255, 255, 255, 0.9);
   animation: bgload 0s 1.5s both;
   -webkit-animation: bgload 0s 2s both;
   z-index: 4;
@@ -21,17 +21,17 @@ $anim-delay: 350ms;
   .load {
     height: 100%;
     width: 100%;
-    gap:15px;
+    gap: 15px;
     width: $size * 5;
     height: $size * 1;
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
-   animation: logoload $anim-dur $anim-delay both;
-   -webkit-animation: logoload $anim-dur $anim-delay both;
-h5{
-  transform: scale(1.5);
-}
+    animation: logoload $anim-dur $anim-delay both;
+    -webkit-animation: logoload $anim-dur $anim-delay both;
+    h5 {
+      transform: scale(1.5);
+    }
     &__bar {
       opacity: 0;
       display: flex;
@@ -43,11 +43,10 @@ h5{
       width: $size;
       animation: bars $anim-dur $anim-delay both;
       -webkit-animation: bars $anim-dur $anim-delay both;
-    -moz-animation: bars $anim-dur $anim-delay both;
+      -moz-animation: bars $anim-dur $anim-delay both;
       @for $i from 1 through 3 {
         &--#{$i} {
           animation-delay: $anim-delay * $i;
-  
         }
       }
     }
@@ -66,33 +65,30 @@ h5{
 
 @keyframes bars {
   10% {
-    transform: rotate(0)scale(1);
+    transform: rotate(0) scale(1);
     opacity: 1;
   }
   95% {
-    transform: rotate(180deg)scale(0);
+    transform: rotate(180deg) scale(0);
     opacity: 0;
   }
 }
 @keyframes logoload {
-    30% {
-      opacity: 1;
-
-
-    }
-    100% {
-      opacity: 0;
-    }
+  30% {
+    opacity: 1;
   }
-  @keyframes bgload {
-    30% {
-      opacity: 1;
-      transform: scale(1);
-
-    }
-    100% {
-      opacity: 0;
-      transform: scale(0);
-      display: none;
-    }
+  100% {
+    opacity: 0;
   }
+}
+@keyframes bgload {
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+    display: none;
+  }
+}
