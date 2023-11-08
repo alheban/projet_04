@@ -1,14 +1,15 @@
 input[type="checkbox"] {
   display: none;
 }
-input[type="checkbox"]:hover + label {
+
+/*input[type="checkbox"]:hover + label {
   .coeur__vide {
     opacity: 0;
   }
   .coeur__plein {
     opacity: 1;
   }
-}
+}*/
 input[type="checkbox"]:checked + label {
   .coeur__plein {
     opacity: 1;
