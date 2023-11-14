@@ -47,6 +47,16 @@ h4 {
   color: #353535;
 }
 
+.fonctionnement span {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -233,6 +243,7 @@ span {
 }
 .fa-solid {
   margin-right: 17px;
+  font-size: 1.25em;
 }
 
 .btn-gradient {
@@ -247,6 +258,9 @@ span {
   border: none;
   position: relative;
   z-index: 1;
+}
+.btn-gradient:hover {
+  cursor: pointer;
 }
 .btn-gradient:hover::after {
   opacity: 1;
@@ -300,21 +314,17 @@ input[type=checkbox]:checked + label .coeur__vide {
 }
 
 .check1 {
+  cursor: pointer;
   position: relative;
-  left: 5%;
+  left: 4%;
 }
 @media (min-width: 768px) {
   .check1 {
-    left: 0;
+    left: 2%;
   }
 }
-@media (max-width: 320px) {
-  .check1 {
-    left: -4%;
-  }
-}
-
 label {
+  cursor: pointer;
   display: inline-block;
   overflow: hidden;
 }
@@ -327,7 +337,6 @@ label {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   z-index: -3;
   width: 23px;
   height: 23px;
@@ -341,7 +350,6 @@ label {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   z-index: 3;
   width: 23px;
   height: 23px;
@@ -628,16 +636,15 @@ footer .main-footer__links .fa-solid {
   display: flex;
   -webkit-flex-flow: row;
   flex-flow: row nowrap;
-  justify-content: flex-start;
   align-items: center;
-  gap: 24px;
   margin-top: 32px;
-  margin-left: 6%;
+  justify-content: space-between;
+  padding: 0px 36px;
 }
 @media (min-width: 768px) {
   .menu__titre {
+    gap: 20px;
     justify-content: center;
-    margin-left: 0;
   }
 }
 .menu__cardsliste {
@@ -707,6 +714,7 @@ footer .main-footer__links .fa-solid {
   .menu__cardsliste__card .card_titre > p,
   .menu__cardsliste__card h3 {
     width: 242px;
+    overflow: visible;
   }
 }
 .menu__cardsliste__card .card_content {
@@ -717,8 +725,8 @@ footer .main-footer__links .fa-solid {
 }
 .menu__cardsliste__card .card_content .card_prix {
   display: flex;
-  align-items: center;
-  margin-right: 2%;
+  align-items: end;
+  margin-right: 15px;
 }
 .menu__cardsliste__card .card_check {
   background-color: #99E2D0;
@@ -800,4 +808,16 @@ footer .main-footer__links .fa-solid {
     opacity: 1;
     transform: translatey(0);
   }
+}
+.alignlogo {
+  display: flex;
+  align-items: center;
+}
+
+.aligntext {
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

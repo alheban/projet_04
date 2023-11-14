@@ -37,6 +37,9 @@
   }
 
   ///puce etape customisze avec fonction counter
+
+
+
   ol {
     padding: 0;
     margin: 0;
@@ -197,14 +200,15 @@ $anim-delay-menu: 500ms;
     display: flex;
     -webkit-flex-flow: row;
     flex-flow: row nowrap;
-    justify-content: flex-start;
     align-items: center;
-    gap: 24px;
+    //gap: 24px;
     margin-top: 32px;
-    margin-left: 6%;
+    //margin-left: 6%;
+    justify-content: space-between;
+    padding: 0px 36px;
     @media (min-width: $breakpoint_768) {
+      gap:20px;
       justify-content: center;
-      margin-left: 0;
     }
   }
   &__cardsliste {
@@ -260,6 +264,7 @@ $anim-delay-menu: 500ms;
         }
         @media (min-width: $breakpoint_375) {
           width: 242px;
+          overflow: visible;
         }
       }
 
@@ -271,8 +276,8 @@ $anim-delay-menu: 500ms;
 
         .card_prix {
           display: flex;
-          align-items: center;
-          margin-right: 2%;
+          align-items: end;
+          margin-right: 15px;
         }
       }
 
@@ -359,4 +364,20 @@ $anim-delay-menu: 500ms;
     opacity: 1;
     transform: translatey(0);
   }
+}
+
+
+///////correction evalutation
+
+ 
+.alignlogo{
+  display: flex;
+  align-items: center;
+}
+.aligntext{
+text-align: left;
+display: flex;
+justify-content: flex-start;
+flex-direction: row;
+flex-wrap: wrap;
 }

@@ -32,17 +32,19 @@ input[type="checkbox"]:checked + label {
 }
 //check page restaurant
 .check1{
+  cursor: pointer;
   position: relative;
-  left:5%;
+  left:4%;
   @media (min-width: 768px) {
-    left: 0;
+left:2%;
   }
   @media (max-width:320px) {
-    left: -4%;
+   // left: -4%;
   }
 
 }
 label {
+  cursor: pointer;
   display: inline-block;
   overflow: hidden;
 }
@@ -55,7 +57,7 @@ label {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  //sleft: 0;
   z-index: -3;
   width: 23px;
   height: 23px;
@@ -69,7 +71,7 @@ label {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  //left: 0;
   z-index: 3;
   width: 23px;
   height: 23px;

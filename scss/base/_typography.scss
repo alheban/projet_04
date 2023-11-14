@@ -35,6 +35,15 @@ h4 {
 }
 
 //body
+.fonctionnement span{
+  color: #000;
+  @include Font-global500;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+}
 
 h2 {
   @include Font-global700;
