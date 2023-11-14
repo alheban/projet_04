@@ -652,18 +652,20 @@ footer .main-footer__links .fa-solid {
   display: flex;
   justify-content: center;
   flex-flow: column wrap;
-  margin: 10px;
   gap: 12px;
   animation: menus-appear 1s 500ms both;
 }
 .menu__cardsliste--1 {
   animation-delay: 500ms;
+  padding: 0 10px;
 }
 .menu__cardsliste--2 {
   animation-delay: 1000ms;
+  padding: 0 10px;
 }
 .menu__cardsliste--3 {
   animation-delay: 1500ms;
+  padding: 0 10px;
 }
 @media (min-width: 768px) {
   .menu__cardsliste {
@@ -696,7 +698,6 @@ footer .main-footer__links .fa-solid {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 250px;
 }
 @media (min-width: 768px) {
   .menu__cardsliste__card .card_titre > p,
@@ -704,16 +705,9 @@ footer .main-footer__links .fa-solid {
     width: 100%;
   }
 }
-@media (max-width: 320px) {
-  .menu__cardsliste__card .card_titre > p,
-  .menu__cardsliste__card h3 {
-    width: 187px;
-  }
-}
 @media (min-width: 375px) {
   .menu__cardsliste__card .card_titre > p,
   .menu__cardsliste__card h3 {
-    width: 242px;
     overflow: visible;
   }
 }

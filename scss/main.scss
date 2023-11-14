@@ -216,12 +216,13 @@ $anim-delay-menu: 500ms;
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
-    margin: 10px;
+    //margin: 10px;
     gap: 12px;
     animation: menus-appear $anim-dur-menu $anim-delay-menu both;
     @for $i from 1 through 3 {
       &--#{$i} {
         animation-delay: $anim-delay-menu * $i;
+        padding: 0 10px;
       }
     }
     @media (min-width: $breakpoint_768) {
@@ -255,15 +256,15 @@ $anim-delay-menu: 500ms;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: 250px;
+        //width: 250px;
         @media (min-width: $breakpoint_768) {
-          width: 100%;
+        width: 100%;
         }
         @media (max-width: $breakpoint_320) {
-          width: 187px;
+        //width: 187px;
         }
         @media (min-width: $breakpoint_375) {
-          width: 242px;
+        //width: 242px;
           overflow: visible;
         }
       }
