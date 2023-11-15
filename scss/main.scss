@@ -38,13 +38,11 @@
 
   ///puce etape customisze avec fonction counter
 
-
-
   ol {
     padding: 0;
     margin: 0;
     counter-reset: ol;
-    //La propriété CSS réinitialise un compteur CSS à une valeur donnée. Cette propriété créera un nouveau compteur 
+    //La propriété CSS réinitialise un compteur CSS à une valeur donnée. Cette propriété créera un nouveau compteur
     @include flexbox-colunmwrap;
     gap: 20px;
     @media (min-width: $breakpoint_768) {
@@ -99,9 +97,9 @@
   flex-wrap: wrap;
   background-color: $background-greylight;
   padding: 20px;
-  gap:15px;
+  gap: 15px;
   @media (min-width: $breakpoint_768) {
-    gap:25px;
+    gap: 25px;
     padding: 25px 10%;
   }
   .main-restaurants {
@@ -117,14 +115,14 @@
         @include flexbox-colunmwrap;
         gap: 15px;
         @media (min-width: $breakpoint_768) {
-         width: 45%; 
+          width: 45%;
         }
         &__content {
           background: $background-white;
           border-radius: 15px;
           filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
           transition: 0.5s;
-          
+
           &:hover {
             box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
           }
@@ -141,7 +139,7 @@
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
           }
-          
+
           .stickernew {
             background-color: $tertiaire-green;
             box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -161,11 +159,11 @@
           .stickernew:not(.st1, .st2) {
             display: none;
           }
-          }
         }
       }
     }
   }
+}
 
 //////////page restaurant à la francaise///////////
 .bandeau-restaurant {
@@ -191,6 +189,7 @@ $anim-delay-menu: 500ms;
   z-index: 2;
   gap: 40px;
   padding-bottom: 40px;
+  width: 100%;
   @media (min-width: $breakpoint_768) {
     width: 90%;
     left: 5%;
@@ -207,7 +206,7 @@ $anim-delay-menu: 500ms;
     justify-content: space-between;
     padding: 0px 36px;
     @media (min-width: $breakpoint_768) {
-      gap:20px;
+      gap: 20px;
       justify-content: center;
     }
   }
@@ -218,6 +217,7 @@ $anim-delay-menu: 500ms;
     flex-flow: column wrap;
     //margin: 10px;
     gap: 12px;
+    
     animation: menus-appear $anim-dur-menu $anim-delay-menu both;
     @for $i from 1 through 3 {
       &--#{$i} {
@@ -241,75 +241,91 @@ $anim-delay-menu: 500ms;
 
     &__card {
       display: flex;
-      flex-flow: row nowrap;
       justify-content: space-between;
-      align-items: center;
       background-color: $background-white;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
       border-radius: 15px;
-      height: 42px;
-      padding: 15px;
       overflow: hidden;
-
-      .card_titre > p,
-      h3 {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        //width: 250px;
-        @media (min-width: $breakpoint_768) {
-        width: 100%;
+      width: 100%;
+      .card_titre {
+          padding: 12px 18px 12px 10px;
+          width: 154px;
+          @media screen and (min-width: 375px) and (max-width: 424px) {
+            width: 209px;
+          }
+          @media screen and (min-width: 525px) and (max-width: 767px) {
+            width: 100%;
+          }
+          @media screen and (min-width: 425px) and (max-width: 525px) {
+            width: 259px;
+          }
+          @media screen and (min-width: 768px){
+            width: 100%;
+          }
+          &_p{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-top: 9px;
+          }
+          &_h3{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          @media (min-width: $breakpoint_768) {
+            width: 100%;
+          }
         }
-        @media (max-width: $breakpoint_320) {
-        //width: 187px;
-        }
-        @media (min-width: $breakpoint_375) {
-        //width: 242px;
-          overflow: visible;
-        }
-      }
-
-      .card_content {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        width: 100%;
-
-        .card_prix {
+        
+        .animcheck{
           display: flex;
-          align-items: end;
-          margin-right: 15px;
+          flex-direction: row;
         }
+      .card_prix {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 12px 0 12px 0;
+        align-items: end;
+        margin-right: 15px;
       }
-
       .card_check {
         background-color: $tertiaire-green;
         border-radius: 0 15px 15px 0;
-        width: 70px;
+        width: 60px;
         height: 72px;
-        margin-right: -85px;
+        margin-right: -75px;
         display: flex;
         align-items: center;
         justify-items: center;
+        padding-left: 15px;
         animation: reverse__card_check__appear 0.8s;
         svg {
           font-size: 2rem;
           fill: white;
-          padding: 20px;
+          padding: 15px;
           animation: reverse__card_check__rotate 0.8s forwards ease-in-out;
         }
       }
       &:hover {
         box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
       }
-      &:hover > .card_check {
-        animation: card_check__appear 0.8s forwards ease-in-out;
+      &:hover .card_check {
+       animation: card_check__appear 0.8s forwards ease-in-out;
       }
-      &:hover > .card_check svg {
-        animation: card_check__rotate 0.8s forwards ease-in-out;
+      &:hover .card_check svg {
+       animation: card_check__rotate 0.8s forwards ease-in-out;
       }
     }
   }
+
+  ///////////////////////
+
+  /// ////////////////////
+
+
+
   &__btn-commande {
     display: flex;
     justify-content: center;
@@ -319,21 +335,23 @@ $anim-delay-menu: 500ms;
 @keyframes card_check__appear {
   from {
     opacity: 0;
-    margin-right: -85px;
+    margin-right: -60px;
   }
   to {
     opacity: 1;
-    margin-right: -15px;
+   margin-right: 0px;
+
   }
 }
 @keyframes reverse__card_check__appear {
   from {
     opacity: 1;
-    margin-right: -15px;
+    margin-right: 0px;
   }
   to {
     opacity: 0;
-    margin-right: -85px;
+    margin-right: -60px;
+
   }
 }
 @keyframes card_check__rotate {
@@ -367,18 +385,16 @@ $anim-delay-menu: 500ms;
   }
 }
 
-
 ///////correction evalutation
 
- 
-.alignlogo{
+.alignlogo {
   display: flex;
   align-items: center;
 }
-.aligntext{
-text-align: left;
-display: flex;
-justify-content: flex-start;
-flex-direction: row;
-flex-wrap: wrap;
+.aligntext {
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
