@@ -654,18 +654,18 @@ footer .main-footer__links .fa-solid {
   justify-content: center;
   flex-flow: column wrap;
   gap: 12px;
-  animation: menus-appear 1s 500ms both;
+  animation: menus-appear 1s 520ms both;
 }
 .menu__cardsliste--1 {
-  animation-delay: 500ms;
+  animation-delay: 520ms;
   padding: 0 10px;
 }
 .menu__cardsliste--2 {
-  animation-delay: 1000ms;
+  animation-delay: 1040ms;
   padding: 0 10px;
 }
 .menu__cardsliste--3 {
-  animation-delay: 1500ms;
+  animation-delay: 1560ms;
   padding: 0 10px;
 }
 @media (min-width: 768px) {
@@ -748,7 +748,7 @@ footer .main-footer__links .fa-solid {
   border-radius: 0 15px 15px 0;
   width: 60px;
   height: 72px;
-  margin-right: -75px;
+  margin-right: -76px;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -778,7 +778,7 @@ footer .main-footer__links .fa-solid {
 @keyframes card_check__appear {
   from {
     opacity: 0;
-    margin-right: -60px;
+    margin-right: -76px;
   }
   to {
     opacity: 1;
@@ -792,7 +792,7 @@ footer .main-footer__links .fa-solid {
   }
   to {
     opacity: 0;
-    margin-right: -60px;
+    margin-right: -76px;
   }
 }
 @keyframes card_check__rotate {
